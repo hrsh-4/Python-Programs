@@ -1,0 +1,23 @@
+
+
+
+class Employee:
+
+	def __init__(self):
+
+		self.fn = None
+		self.ln = None
+		self.sal = None
+	def setvalueS(self,fn,ln,sal):
+		if int(sal)<0:
+			print("Enter correct value of salary")
+		else:
+			self.fn = fn
+			self.ln = ln
+			self.sal = sal
+	def getvalues(self):
+		print("\nFIRST NAME : ",self.fn,"\nLAST NAME : ",self.ln,"\nSALARY : ",self.sal)
+
+p1 = Employee()
+p1.setvalueS("A","B",2000)
+p1.getvalues()
