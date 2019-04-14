@@ -1,0 +1,54 @@
+   
+   
+   
+class Time:
+
+    def __init__(self):
+
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+
+    def getTime(self,h,m,s):
+
+        self.hours = h
+        self.minutes = m
+        self.seconds = s
+
+    def showTime(self):
+        print(" The time is : \n",self.hours,":",self.minutes,":",self.seconds)
+
+print("*** THE TIME FORMAT IS HH:MM:SS***")
+
+h = int(input("Enter hours : "))
+
+
+while h>23:
+    print("Enter correct hours!!")
+    h = int(input("Enter hours : "))
+
+m = int(input("Enter minutes : "))
+while m>60:
+    print("Enter correct minutes!!")
+    m = int(input("Enter minutes : "))
+
+if m>=60:
+    h = h + 1
+    if h>=24:
+        h = 0
+    m = 0
+    s = 0
+
+s = int(input("Enter seconds : "))
+
+while s>60:
+    print("Enter correct seconds!! ")
+    s = int(input("Enter seconds : "))
+
+if s>=60:
+    m = m +1
+    s = 0
+
+my = Time()
+my.getTime(h,m,s)
+my.showTime()  
