@@ -1,0 +1,12 @@
+class Rectangle: 
+    def __init__(self,l,b):
+        self.l = l
+        self.b = b
+    def area(self,obj):
+        obj.l = self.l 
+        obj.b = self.b 
+        print("Area : ",obj.l*obj.b)
+r = Rectangle(10,20)
+r.area(r)
+h = r 
+h.area(r) 
